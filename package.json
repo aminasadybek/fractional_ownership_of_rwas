@@ -1,0 +1,22 @@
+{
+  "name": "fractional_ownership_of_rwas",
+  "version": "0.1.0",
+  "description": "Fractional ownership of a high-value real-world asset (RWA): contracts, tests and measurements for the CSCI 435 research track project.",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aminasadybek/fractional_ownership_of_rwas.git"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "6.1.2",
+    "hardhat": "2.29.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.6.1"
+  }
+}
