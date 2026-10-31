@@ -1,0 +1,23 @@
+{
+  "date_utc": "2026-10-31T17:24:48.179Z",
+  "network": "hardhat",
+  "hardhat_version": "2.29.1",
+  "openzeppelin_version": "5.6.1",
+  "solc_version": "0.8.28",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "evm_version": "cancun",
+  "node_version": "v22.23.4",
+  "total_shares": "1000000000000000000000",
+  "owner_counts": [
+    1,
+    2,
+    5,
+    10,
+    20,
+    50,
+    100
+  ]
+}

@@ -38,6 +38,27 @@ npx hardhat compile
 npx hardhat test
 ```
 
+## Reproduce the measurements
+
+```bash
+# 1. Gas measurements on the local Hardhat network -> data/*.csv, data/gas_run_metadata.json
+npx hardhat run scripts/measure_gas.js
+
+# 2. Figure -> figures/exit_cost_vs_owners.png
+python -m venv .venv
+.venv\Scripts\activate          # Windows  (macOS/Linux: source .venv/bin/activate)
+pip install -r requirements.txt
+python scripts/plot_exit_cost.py
+```
+
+The measurement is deterministic: accounts come from Hardhat's fixed development mnemonic and no random numbers are used, so gas figures are identical on every machine with the pinned versions. `data/gas_run_metadata.json` records the compiler, library versions and date of the run.
+
+| Output                          | What it contains                                                            |
+|---------------------------------|-----------------------------------------------------------------------------|
+| `data/gas_operations.csv`       | Gas per single operation (deploy, fractionalize, transfer, redeem)          |
+| `data/exit_cost_vs_owners.csv`  | Gas for one buyer to re-collect all shares from N owners, then redeem       |
+| `figures/exit_cost_vs_owners.png` | Plot of the above                                                         |
+
 ## License
 
 MIT — see `LICENSE`. Third-party code (OpenZeppelin Contracts) keeps its own MIT licence inside `node_modules/@openzeppelin/contracts`.

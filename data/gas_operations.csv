@@ -1,0 +1,9 @@
+operation,gas_used
+deploy_asset_token,1050568
+mint_asset,93035
+deploy_vault,733347
+approve_asset,48673
+fractionalize,131938
+transfer_shares_new_holder,51608
+transfer_shares_existing_holder,34508
+redeem,69794
